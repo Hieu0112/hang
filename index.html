@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- 0. Phần icon của website (thay đổi link đến icon nếu bạn muốn sửa nó) -->
+        <link rel="shortcut icon" type="image/png" href="./icon.jpg"/>
+
+        <!-- 1. Đây là phần title của website -->
+        <title>Happy-Birthday</title>
+        <link rel="stylesheet" href="./snvv.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- 2. Dòng chữ Happy Birthday
+            Nếu bạn muốn thêm chữ vào thì phải thay đổi css tương ứng cho nó -->
+            <div class="balloon">
+                <div class="ballH all-ball"><span>H</span></div>
+                <div class="ballA all-ball"><span>A</span></div>
+                <div class="ballP all-ball"><span>P</span></div>
+                <div class="ballP2  all-ball"><span>P</span></div>
+                <div class="ballY  all-ball"><span>Y</span></div>
+                <div class="ballB  all-ball"><span>B</span></div>
+                <div class="ballI all-ball"><span>I</span></div>
+                <div class="ballR all-ball"><span>R</span></div>
+                <div class="ballT all-ball"><span>T</span></div>
+                <div class="ballH2  all-ball"><span>H</span></div>
+                <div class="ballD  all-ball"><span>D</span></div>
+                <div class="ballA2 all-ball"><span>A</span></div>
+                <div class="ballY2 all-ball"><span>Y</span></div>
+            </div>
+            <div class="avatar">
+                <!-- 3. Avatar của người bạn muốn gởi lời chúc -->
+                <img src="./z3137166548790_2d83f6354e012518d41afb93326880f6.jpg" alt="" class="avatar__img" onclick="showMessage()" />
+                <!-- 4. Tên của người đó -->
+                <h1 onclick="showMessage()" class="avatar__title">Đỗ Thị Hằng</h1>
+            </div>
+            
+            <!-- 5. Phần nhạc -->
+            <audio id="mp3-music" controls autoplay loop>
+                <source src="hppd.mp3" type="audio/mp3">
+            </audio>
+
+        </div>
+
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+            }
+            function showMessage() {
+                // 6. Lời nhắn hiện ra khi bấm vào tên hoặc avatar
+                swal({
+                    title: "Lời nhắn", // Tiêu đề của popup
+                    text: " Một năm đã qua. Có những dự định cũng trở thành hiện thực, nhưng cũng có những kế hoạch dở dang, dặn lòng phải kiên quyết hơn nữa để một năm tới có thể hoàn thiện hơn.Chúc bạn tuổi mới luôn vui vẻ yêu đời ngập tràn sức khỏe và thành công trong công việc nhé!!!", // Nội dung lời nhắn
+                    button: {
+                        text: "close ❤️ ",
+                    },
+                });
+            }
+        </script>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>     
+        
+    </body>
+</html>
